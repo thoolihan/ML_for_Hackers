@@ -23,6 +23,7 @@
 # Otherwise you will see errors when loading data or saving figures!
 
 # Load libraries and data
+setwd("01-Introduction")
 library(ggplot2)    # We'll use ggplot2 for all of our visualizations
 library(plyr)       # For data manipulation
 library(scales)     # We'll need to fix date formats in plots
