@@ -20,7 +20,7 @@
 #
 
 # Load in the data set from disk.
-data.file <- file.path('data', '01_heights_weights_genders.csv')
+data.file <- file.path('02-Exploration', 'data', '01_heights_weights_genders.csv')
 heights.weights <- read.csv(data.file, header = TRUE, sep = ',')
 
 # Create a numeric vector containing just the heights data.
@@ -134,6 +134,8 @@ quantile(heights)
 #
 # Snippet 9
 #
+
+hist(heights)
 
 quantile(heights, probs = seq(0, 1, by = 0.20))
 #      0%      20%      40%      60%      80%     100% 
