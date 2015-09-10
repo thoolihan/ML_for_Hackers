@@ -27,6 +27,8 @@ heights.weights <- read.csv(data.file, header = TRUE, sep = ',')
 heights <- with(heights.weights, Height)
 summary(heights)
 
+majority <- c(quantile(heights, probs = 0.05), quantile(heights, probs = 0.95))
+
 # Expected output.
 # Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 #54.26   63.51   66.32   66.37   69.17   79.00 
@@ -243,7 +245,7 @@ c(quantile(heights, probs = 0.25), quantile(heights, probs = 0.75))
 library('ggplot2')
 
 # Load the data from scratch for purity.
-data.file <- file.path('data', '01_heights_weights_genders.csv')
+data.file <- file.path('02-Exploration', 'data', '01_heights_weights_genders.csv')
 heights.weights <- read.csv(data.file, header = TRUE, sep = ',')
 
 # Experiment with histograms.
